@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ifeanyi & Samuel | Anniversary</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HOMEPAGE -->
+  <main id="homepage" class="homepage">
+
+    <div class="home-content">
+      <p class="small-heading">A celebration of love</p>
+
+      <h1>Ifeanyi <span>&</span> Samuel</h1>
+
+      <p class="timer-intro">You've been traditionally hitched for....</p>
+
+      <div id="love-timer" class="love-timer">
+        <div><strong id="years">0</strong><span>Years</span></div>
+        <div><strong id="months">0</strong><span>Months</span></div>
+        <div><strong id="days">0</strong><span>Days</span></div>
+        <div><strong id="hours">0</strong><span>Hours</span></div>
+        <div><strong id="minutes">0</strong><span>Minutes</span></div>
+        <div><strong id="seconds">0</strong><span>Seconds</span></div>
+      </div>
+
+      <p class="date-caption">November 26, 2024</p>
+
+      <button id="open-envelope" class="open-envelope">
+        <span class="envelope-icon">✉</span>
+        <span>Open</span>
+      </button>
+    </div>
+
+    <p class="homepage-footer">Made with love, just for you two ♡</p>
+  </main>
+
+
+  <!-- TREASURE CHESTS -->
+  <section id="treasure-room" class="treasure-room hidden">
+
+    <div class="section-heading">
+      <p>A little something for you</p>
+      <h2>Three little treasures</h2>
+      <span>Each one holds something special.</span>
+    </div>
+
+    <div class="treasure-container">
+
+      <button class="treasure" data-treasure="video">
+        <span class="chest-icon">🧰</span>
+        <span class="treasure-name">A Video</span>
+        <span class="treasure-hint">Tap to open</span>
+      </button>
+
+      <button class="treasure" data-treasure="letter">
+        <span class="chest-icon">🧰</span>
+        <span class="treasure-name">A Letter</span>
+        <span class="treasure-hint">Tap to open</span>
+      </button>
+
+      <button class="treasure" data-treasure="games">
+        <span class="chest-icon">🧰</span>
+        <span class="treasure-name">A Little Fun</span>
+        <span class="treasure-hint">Tap to open</span>
+      </button>
+
+    </div>
+
+    <button class="back-home" id="back-home">← Back to homepage</button>
+  </section>
+
+
+  <!-- GIFT CONTENT -->
+  <section id="gift-content" class="gift-content hidden">
+
+    <button id="back-treasures" class="back-home">← Back to treasures</button>
+
+    <!-- VIDEO GIFT -->
+    <div id="video-gift" class="gift-panel hidden">
+      <p class="small-heading">Our messages</p>
+      <h2>A little something to watch</h2>
+
+      <video id="anniversary-video" controls playsinline>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support this video.
+      </video>
+    </div>
+
+
+    <!-- LETTER GIFT -->
+    <div id="letter-gift" class="gift-panel hidden">
+      <p class="small-heading">From the heart</p>
+      <h2>A Letter for You</h2>
+
+      <div class="letter-paper">
+        <!-- INSERT YOUR LETTER HERE -->
+        <p>
+          Happy Wedding Anniversary to the CEO and PM of Newace Media!
+
+Some unions make you smile because you can tell that two people were beautifully meant to find each other. Yours is one of such unions. It's lovely to see how two different individuals can come together and complement each other so effortlessly. One can't help but feel that Jehovah, in His own beautiful way, knew exactly what He was doing when He brought you both together. He really use una settle each other. ❤️
+
+No matter how far life takes you or what seasons come your way, may you always find comfort, peace, and belonging in each other's arms. May home never just be a place you return to, but a feeling you both continue to find in each other.
+
+Keeping 1 Corinthians 13:4-8 in mind may your love keep deepening, your friendship keep blossoming, and your reasons to choose each other never run out as you continue living in Colossians 3:14.
+
+Here's to many more beautiful years of doing life together. Happy Anniversary! May Jehovah continue to bless your union abundantly. ❤️🥂
+
+        </p>
+      </div>
+    </div>
+
+
+    <!-- GAMES GIFT -->
+    <div id="games-gift" class="gift-panel hidden">
+
+      <p class="small-heading">A little fun for two</p>
+      <h2>Let's Play Something</h2>
+
+      <div id="games-menu" class="games-menu">
+        <button class="game-choice" data-game="who-knows">
+          <span>01</span>
+          <strong>Who Knows Who?</strong>
+          <small>How well do you know each other?</small>
+        </button>
+
+        <button class="game-choice" data-game="this-or-that">
+          <span>02</span>
+          <strong>This or That</strong>
+          <small>Make your choices.</small>
+        </button>
+
+        <button class="game-choice" data-game="remember-when">
+          <span>03</span>
+          <strong>Remember When?</strong>
+          <small>A trip down memory lane.</small>
+        </button>
+
+        <button class="game-choice" data-game="bucket-list">
+          <span>04</span>
+          <strong>Things We Should Do</strong>
+          <small>A little list of things to do together.</small>
+        </button>
+      </div>
+
+
+      <!-- GAME SCREEN -->
+      <div id="game-screen" class="game-screen hidden">
+        <button id="back-games" class="back-home">← Back to games</button>
+        <h3 id="game-title"></h3>
+        <div id="game-area"></div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,799 @@
+
+/* =========================================
+   IF EANYI & SAMUEL
+   VINTAGE ANNIVERSARY WEBSITE
+========================================= */
+
+:root {
+  --cream: #f3e8d4;
+  --paper: #e8d6b8;
+  --brown: #5b3828;
+  --dark-brown: #302016;
+  --gold: #b28a50;
+  --muted-gold: #d0b17d;
+  --wine: #642f36;
+  --photo-overlay: rgba(31, 20, 14, 0.68);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Cormorant Garamond', serif;
+  background: var(--dark-brown);
+  color: var(--cream);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+/* =========================================
+   SHARED PHOTO BACKGROUND
+========================================= */
+
+.homepage,
+.treasure-room,
+.gift-content {
+  background-image:
+    linear-gradient(
+      rgba(31, 20, 14, 0.48),
+      rgba(31, 20, 14, 0.72)
+    ),
+    url("couple.jpg");
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* =========================================
+   HOMEPAGE
+========================================= */
+
+.homepage {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 45px 20px;
+  overflow: hidden;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 850px;
+  animation: fadeIn 1.5s ease;
+}
+
+.small-heading {
+  font-size: 15px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--muted-gold);
+  margin-bottom: 18px;
+}
+
+.home-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 8vw, 82px);
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.home-content h1 span {
+  color: var(--muted-gold);
+  font-style: italic;
+}
+
+.timer-intro {
+  font-size: clamp(20px, 4vw, 29px);
+  margin-bottom: 25px;
+  color: var(--paper);
+}
+
+.love-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 25px auto;
+}
+
+.love-timer div {
+  min-width: 85px;
+  padding: 15px 10px;
+  border-right: 1px solid rgba(208, 177, 125, 0.4);
+}
+
+.love-timer div:last-child {
+  border-right: none;
+}
+
+.love-timer strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(27px, 5vw, 42px);
+  font-weight: 400;
+  color: var(--muted-gold);
+}
+
+.love-timer span {
+  display: block;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+.date-caption {
+  color: var(--paper);
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-top: 20px;
+}
+
+
+/* =========================================
+   ENVELOPE BUTTON
+========================================= */
+
+.open-envelope {
+  margin-top: 45px;
+  padding: 14px 38px;
+
+  background: rgba(48, 32, 22, 0.35);
+  color: var(--cream);
+
+  border: 1px solid var(--muted-gold);
+  border-radius: 2px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 20px;
+  letter-spacing: 2px;
+
+  transition: all 0.4s ease;
+}
+
+.open-envelope:hover {
+  background: var(--muted-gold);
+  color: var(--dark-brown);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.envelope-icon {
+  font-size: 25px;
+}
+
+.homepage-footer {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+
+  color: var(--muted-gold);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   TREASURE ROOM
+========================================= */
+
+.treasure-room {
+  min-height: 100vh;
+  padding: 80px 20px 50px;
+  text-align: center;
+}
+
+.section-heading {
+  margin-bottom: 60px;
+  animation: fadeIn 1s ease;
+}
+
+.section-heading p {
+  color: var(--muted-gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.section-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(35px, 6vw, 55px);
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.section-heading span {
+  font-size: 19px;
+  color: var(--paper);
+}
+
+.treasure-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 45px;
+
+  max-width: 1000px;
+  margin: 0 auto 60px;
+}
+
+
+/* =========================================
+   VINTAGE TREASURE CHESTS
+========================================= */
+
+.treasure {
+  width: 210px;
+  min-height: 190px;
+  padding: 25px 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #80552f,
+      #4b2c1b 55%,
+      #29180f
+    );
+
+  border: 2px solid var(--gold);
+  border-radius: 12px 12px 5px 5px;
+
+  color: var(--cream);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  position: relative;
+  overflow: hidden;
+
+  box-shadow:
+    inset 0 3px 8px rgba(255, 218, 157, 0.2),
+    inset 0 -8px 12px rgba(0, 0, 0, 0.4),
+    0 12px 25px rgba(0, 0, 0, 0.4);
+
+  transition: all 0.4s ease;
+}
+
+/* Gold chest bands */
+
+.treasure::before,
+.treasure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+
+  background: linear-gradient(
+    to right,
+    #805d2e,
+    #e0bd75,
+    #a47b3d
+  );
+
+  border-left: 1px solid #edce91;
+  border-right: 1px solid #6c4826;
+}
+
+.treasure::before {
+  left: 24%;
+}
+
+.treasure::after {
+  right: 24%;
+}
+
+/* Chest lock */
+
+.chest-icon {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  width: 75px;
+  height: 65px;
+
+  font-size: 0;
+  background: linear-gradient(
+    145deg,
+    #a66e39,
+    #63391e
+  );
+
+  border: 3px solid #d3ad69;
+  border-radius: 8px 8px 5px 5px;
+
+  box-shadow:
+    inset 0 5px 8px rgba(255, 220, 155, 0.25),
+    0 7px 10px rgba(0, 0, 0, 0.35);
+
+  transition: transform 0.4s ease;
+}
+
+.chest-icon::before {
+  content: "";
+  position: absolute;
+
+  width: 69px;
+  height: 25px;
+
+  top: -12px;
+  left: 0;
+
+  background: linear-gradient(
+    145deg,
+    #b57e47,
+    #744321
+  );
+
+  border: 3px solid #d3ad69;
+  border-radius: 50% 50% 4px 4px;
+}
+
+.chest-icon::after {
+  content: "◆";
+  position: absolute;
+
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: #f4d58e;
+  font-size: 17px;
+
+  background: #805528;
+  border: 1px solid #d8b56e;
+  padding: 0 5px;
+}
+
+.treasure:hover {
+  transform: translateY(-12px);
+  border-color: #f2d18c;
+
+  box-shadow:
+    0 0 15px rgba(208, 177, 125, 0.35),
+    0 0 35px rgba(208, 177, 125, 0.2),
+    0 15px 30px rgba(0, 0, 0, 0.45);
+
+  animation: chestGlow 1.5s infinite alternate;
+}
+
+.treasure:hover .chest-icon {
+  transform: translateY(-5px) scale(1.06);
+}
+
+.treasure-name {
+  position: relative;
+  z-index: 1;
+
+  font-size: 23px;
+  color: #f1d29b;
+  margin-top: 10px;
+}
+
+.treasure-hint {
+  position: relative;
+  z-index: 1;
+
+  font-size: 15px;
+  color: var(--paper);
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   BACK BUTTONS
+========================================= */
+
+.back-home {
+  background: rgba(48, 32, 22, 0.4);
+  color: var(--muted-gold);
+
+  border: 1px solid rgba(208, 177, 125, 0.6);
+  padding: 10px 22px;
+
+  font-size: 17px;
+  transition: 0.3s ease;
+  margin: 10px;
+}
+
+.back-home:hover {
+  background: var(--muted-gold);
+  color: var(--dark-brown);
+}
+
+
+/* =========================================
+   GIFT CONTENT
+========================================= */
+
+.gift-content {
+  min-height: 100vh;
+  padding: 45px 20px 70px;
+  text-align: center;
+}
+
+.gift-panel {
+  max-width: 850px;
+  margin: 55px auto 0;
+  animation: fadeIn 0.8s ease;
+}
+
+.gift-panel h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 400;
+  margin: 15px 0 35px;
+}
+
+
+/* =========================================
+   VIDEO GIFT
+========================================= */
+
+#anniversary-video {
+  width: 100%;
+  max-width: 750px;
+  max-height: 75vh;
+
+  background: #160f0b;
+  border: 5px solid var(--gold);
+  border-radius: 4px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================
+   LETTER GIFT
+========================================= */
+
+.letter-paper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 50px clamp(22px, 7vw, 65px);
+
+  background:
+    linear-gradient(
+      rgba(244, 230, 204, 0.97),
+      rgba(232, 214, 184, 0.97)
+    );
+
+  color: #493021;
+  text-align: left;
+
+  min-height: 350px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid #b28a50;
+}
+
+.letter-paper p {
+  font-size: 22px;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+
+/* =========================================
+   GAMES MENU
+========================================= */
+
+.games-menu {
+  max-width: 650px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.game-choice {
+  background: rgba(48, 32, 22, 0.58);
+  border: 1px solid rgba(208, 177, 125, 0.55);
+
+  color: var(--cream);
+  padding: 25px 20px;
+
+  text-align: left;
+  min-height: 150px;
+
+  transition: 0.3s ease;
+}
+
+.game-choice:hover {
+  background: rgba(208, 177, 125, 0.18);
+  transform: translateY(-5px);
+  border-color: var(--muted-gold);
+}
+
+.game-choice span {
+  display: block;
+  font-size: 15px;
+  color: var(--muted-gold);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.game-choice strong {
+  display: block;
+  font-size: 23px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.game-choice small {
+  display: block;
+  font-size: 16px;
+  color: var(--paper);
+}
+
+
+/* =========================================
+   GAME SCREEN
+========================================= */
+
+.game-screen {
+  max-width: 700px;
+  margin: 35px auto 0;
+  padding: 25px 10px;
+  animation: fadeIn 0.6s ease;
+}
+
+.game-screen h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--muted-gold);
+  margin: 20px 0;
+}
+
+#game-area {
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+#game-area button {
+  padding: 12px 22px;
+  margin: 8px;
+
+  background: rgba(48, 32, 22, 0.5);
+  color: var(--cream);
+
+  border: 1px solid var(--muted-gold);
+  transition: 0.3s ease;
+}
+
+#game-area button:hover {
+  background: var(--muted-gold);
+  color: var(--dark-brown);
+}
+
+#game-area input {
+  width: 100%;
+  max-width: 400px;
+  padding: 13px;
+  margin: 10px 0;
+
+  background: var(--cream);
+  color: var(--dark-brown);
+
+  border: none;
+  font: inherit;
+  font-size: 18px;
+}
+
+#game-area .bucket-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 14px 12px;
+  margin: 10px 0;
+
+  background: rgba(48, 32, 22, 0.6);
+  border-bottom: 1px solid rgba(208, 177, 125, 0.3);
+
+  text-align: left;
+}
+
+#game-area .bucket-item input {
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
+
+  accent-color: var(--gold);
+  flex-shrink: 0;
+}
+
+#game-area .bucket-item label {
+  flex: 1;
+  cursor: pointer;
+}
+
+#game-area .bucket-item input:checked + label {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.bucket-progress {
+  margin: 20px 0;
+  color: var(--muted-gold);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes chestGlow {
+  from {
+    filter: brightness(1);
+  }
+
+  to {
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(208, 177, 125, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(208, 177, 125, 0.65);
+  }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+
+  .homepage,
+  .treasure-room,
+  .gift-content {
+    background-attachment: scroll;
+  }
+
+  .homepage {
+    padding: 35px 15px 60px;
+  }
+
+  .small-heading {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .love-timer {
+    gap: 5px;
+  }
+
+  .love-timer div {
+    min-width: 75px;
+    padding: 12px 5px;
+  }
+
+  .love-timer span {
+    font-size: 12px;
+  }
+
+  .date-caption {
+    font-size: 15px;
+  }
+
+  .open-envelope {
+    margin-top: 35px;
+  }
+
+  .treasure-room {
+    padding-top: 55px;
+  }
+
+  .treasure-container {
+    gap: 25px;
+  }
+
+  .treasure {
+    width: min(100%, 260px);
+    min-height: 175px;
+  }
+
+  .chest-icon {
+    width: 70px;
+    height: 60px;
+  }
+
+  .chest-icon::before {
+    width: 64px;
+  }
+
+  .games-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .game-choice {
+    min-height: 125px;
+  }
+
+  .letter-paper {
+    padding: 30px 22px;
+  }
+
+  .letter-paper p {
+    font-size: 19px;
+  }
+
+  .gift-content {
+    padding: 30px 15px 55px;
+  }
+
+  .homepage-footer {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
